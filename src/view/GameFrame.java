@@ -307,6 +307,7 @@ class GameFrame extends JFrame {
         });
 
         saveBtn.addActionListener((ActionEvent e) ->{
+            System.out.println("try to save");
             if(!hasPolygon)
             {
                 JOptionPane.showMessageDialog(this,
@@ -321,12 +322,18 @@ class GameFrame extends JFrame {
             fileChooser.showDialog(this,"保存");
             File file = fileChooser.getSelectedFile();
             if(file==null)
+            {
+                System.out.println("没保存");
                 return;
-            if(file.isFile()){
-                polygonManager.savePolygon(file.getParentFile(),file.getName());
-                JOptionPane.showMessageDialog(this,
-                        "保存成功");
             }
+//            if(file.isFile()){
+//                polygonManager.savePolygon(file.getParentFile(),file.getName());
+//                JOptionPane.showMessageDialog(this,
+//                        "保存成功");
+//            }
+            polygonManager.savePolygon(file.getParentFile(),file.getName());
+            JOptionPane.showMessageDialog(this,
+                    "保存成功");
         });
     }
 }
