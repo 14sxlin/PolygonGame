@@ -4,9 +4,7 @@ import junit.framework.TestCase;
 
 import java.util.ArrayList;
 
-/**
- * Created by sparr on 2017/5/14.
- */
+
 public class TestClone extends TestCase {
 
     class P{

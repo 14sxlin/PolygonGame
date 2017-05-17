@@ -14,13 +14,16 @@ public class PolygonCanvas extends Canvas{
     private ArrayList<DrawVertex> drawVertices; // 注意里面的值实际上是引用的,poly改变的时候,里面的数值也会改变
     private ArrayList<DrawEdge> drawEdges;
 
-    public long max;
+    long max;
     private int margin = 50;
-    private int initWidth = 680;
-    private int initHeight = 650;
+    private Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+    private int width = (int)dim.getWidth()/2;  //frame中使用的width
+    private int height = (int)dim.getHeight()-200; //frame中使用的height
+    private int initWidth = Math.min(height,width);
+    private int initHeight = Math.min(height,width)-25;
     private int x0 = (initWidth-margin)/2;
-    private int y0 = (initHeight-margin)/2;
-    private double r = (Math.min(initWidth,initHeight)-2*margin)/2.0;
+    private int y0 = (initHeight-margin)/2-50;
+    private double r = (Math.min(initWidth,initHeight)-4*margin)/2.0;
 
     private int lastChoice = -1;
 

@@ -1,10 +1,5 @@
 package model;
 
-import java.util.*;
-
-/**
- * 
- */
 public class Edge {
 
     private char op;

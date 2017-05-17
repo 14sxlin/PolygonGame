@@ -5,9 +5,7 @@ import view.PolygonCanvas;
 
 import java.io.File;
 
-/**
- * 
- */
+
 public class Game {
 
 

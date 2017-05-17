@@ -1,8 +1,5 @@
 package model;
 
-/**
- * 
- */
 public class DrawEdge {
 
     private DrawVertex v1;

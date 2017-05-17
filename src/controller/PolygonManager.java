@@ -8,9 +8,6 @@ import view.PolygonCanvas;
 import java.io.*;
 import java.util.*;
 
-/**
- * 
- */
 public class PolygonManager implements Cloneable{
 
     public Polygon polygon;

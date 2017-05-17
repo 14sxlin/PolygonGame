@@ -1,12 +1,8 @@
 package controller;
 
-import model.Polygon;
 
 import java.util.Stack;
 
-/**
- * Created by sparr on 2017/5/14.
- */
 public class StateBackup {
 
     Stack<PolygonManager> stack;

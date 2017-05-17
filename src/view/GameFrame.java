@@ -51,7 +51,12 @@ class GameFrame extends JFrame {
         backup = game.backup;
         polygonCanvas = polygonManager.canvas;
 
-        setSize(700,800);
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        int width = (int)dim.getWidth()/2;
+        int height = (int)dim.getHeight()-200;
+        int size = Math.min(height,width);
+        setSize(size,size);
+        setLocation((int)(dim.getWidth()-width)/2,50);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
@@ -265,6 +270,8 @@ class GameFrame extends JFrame {
 
         replayBtn.addActionListener(e -> {
 
+            if(!hasPolygon)
+                return;
             try {
                 polygonManager = backup.init.copy();
                 polygonCanvas.display(polygonManager.polygon);
